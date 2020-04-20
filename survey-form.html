@@ -14,67 +14,108 @@
         <h1 id="title">My Website's Survey Form</h1>
         <p id="description"><b>Thank you for helping us improve our services</b></p>
         <form id="survey-form" action="/url-where-i-submit-my-form-data">
-            <label for="Name" id="name-label">
+
+            <!-- PRIMA PARTE -->
+
+            <label class="user-details" for="Name" id="name-label">
                 <b>Name</b><br>
-                <input type="text" placeholder="Enter your name" required>
+                <input class="alabala" type="text" placeholder="Enter your name" required>
             </label>
-            <label for="Surname">
+            <label class="user-details" for="Surname">
                 <b>Surname</b><br>
                 <input type="text" placeholder="Enter your Surname" required>
             </label>
-            <label for="Email" id="email-label">
+            <label class="user-details" for="Email" id="email-label">
                 <b>Email</b><br>
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" id="email" placeholder="Enter your email" required>
             </label>
-            <label for="Age" id="number-label">
+            <label class="user-details" for="Age" id="number-label">
                 <b>Age</b> (optional)<br>
-                <input type="number" id="number-label" placeholder="Your age"
+                <input type="number" placeholder="Your age"
                     id="number" min="5"
                     max="110">
             </label>
-            <label for="Dropdown">
-                <b>Where did you here about us?</b><br>
-                <input type="dropdown" id="dropdown" placeholder="Please select
-                    one option">
-            </label>
+            <label class="user-details" for="Dropdown"> <b>Where did you here about us?</b><br></label>
+            <select id="dropdown">
+                <option disabled selected value="">Please select..</option>
+                <option value="Friends">Friends</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Consultant">Consultant</option>
+                <option value="Google">Google Search Engine</option>
+                <option value="University">University flyer</option>
+            </select>
+
+            <!-- A DOUA PARTE -->
 
             <h2 class="subtitle">
                 How satisfactory was your experience on our website today?</h2>
-            <label for="very">
-                <input type="radio" name="radio" value="very">Very satisfactory
-            </label>
-            <label for="satisfactory">
-                <input type="radio" name="radio" value="satisfactory">Satisfactory
-            </label>
-            <label for="unsatisfactory">
-                <input type="radio" name="radio" value="unsatisfactory">Unsatisfactory
-            </label>
-
+            <list>
+                <ul>
+                    <label for="very">
+                        <input type="radio" name="radio" value="very
+                            satisfactory"
+                            checked>Very satisfactory
+                    </label>
+                </ul>
+                <ul>
+                    <label for="satisfactory">
+                        <input type="radio" name="radio"
+                            value="satisfactory">Satisfactory
+                    </label>
+                </ul>
+                <ul>
+                    <label for="unsatisfactory">
+                        <input type="radio" name="radio"
+                            value="unsatisfactory">Unsatisfactory
+                    </label>
+                </ul>
+            </list>
             <h2 class="subtitle">What would you like to see improved? (Check all
                 that apply)</h2>
-            <label for="home-menu">
-                <input type="checkbox" name="checkbox" value="home-menu">The
-                Home Menu
-            </label>
-            <label for="checkout">
-                <input type="checkbox" name="checkbox" value="checkout">The
-                checkout
-            </label>
-            <label for="search-engine">
-                <input type="checkbox" name="checkbox" value="search-engine">The
-                Search Engine
-            </label>
-            <label for="forms">
-                <input type="checkbox" name="checkbox" value="forms">The Forms
-            </label>
-            <label for="news-section">
-                <input type="checkbox" name="checkbox" value="news-section">The
-                News Section
-            </label>
+            <list>
+                <ul>
+                    <label for="home-menu">
+                        <input type="checkbox" name="checkbox"
+                            value="home-menu">The
+                        Home Menu
+                    </label>
+
+                </ul>
+                <ul>
+
+                    <label for="checkout">
+                        <input type="checkbox" name="checkbox" value="checkout">The
+                        checkout
+                    </label>
+                </ul>
+                <ul>
+
+                    <label for="search-engine">
+                        <input type="checkbox" name="checkbox"
+                            value="search-engine">The
+                        Search Engine
+                    </label>
+                </ul>
+                <ul>
+                    <label for="forms">
+                        <input type="checkbox" name="checkbox" value="forms">The
+                        Forms
+                    </label>
+
+                </ul>
+                <ul>
+                    <label for="news-section">
+                        <input type="checkbox" name="checkbox"
+                            value="news-section">The
+                        News Section
+                    </label>
+
+                </ul>
+            </list>
 
             <h2 class="subtitle">Please write below any comments or suggestions</h2>
             <textarea placeholder="Type here any comments or suggestions..."
-                maxlength="500"></textarea>
+                maxlength="500" id="textarea"></textarea>
 
             <button type="submit" id="submit">Submit</button>
         </form>
