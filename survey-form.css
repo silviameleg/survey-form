@@ -1,3 +1,4 @@
+
 body {
   background-color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -15,6 +16,9 @@ body {
   text-align: center;
   margin: 70px auto 50px auto;
   color: white;
+  background-color: rgba(230, 126, 34, 0.8);
+  width: 45%;
+  padding: 30px;
 }
 #description {
   font-size: 25px;
@@ -26,16 +30,14 @@ body {
   background-color: hsla(91, 37%, 49%, 0.8);
   /* background-color: rgba(230, 126, 34, 0.8); */
   height: 100%;
-  width: 50%;
+  width: 45%;
   /* text-align: center; */
   color: white;
   padding: 50px;
   margin: auto;
   font-size: 20px;
 }
-.subtitle {
-  font-size: 20px;
-}
+
 #thanks {
   font-size: 25px;
   text-align: center;
@@ -43,8 +45,9 @@ body {
   color: white;
 }
 #textarea {
-  width: 300px !important;
+  width: 400px !important;
   height: 100px !important;
+  color: black !important;
 }
 #submit:hover {
   color: black;
@@ -52,28 +55,60 @@ body {
   background-color: hsl(61, 89%, 64%);
 }
 #submit {
-  font-size: 17px;
+  margin-top: 30px;
+  width: 110px;
+  height: 35px;
+  font-size: 1.1em;
   color: white;
   background-color: rgb(230, 126, 34);
-  border-radius: 15%;
   border-color: rgb(192, 104, 28);
 }
 
 .user-details {
   font-size: 25px;
-  
+  margin-top: 30px;
 }
 
-.alabala {
-  width: 300px;
+.details-input {
+  width: 500px;
+  height: 1.5em;
+  font: inherit;
+  font-size: 20px;
+  color: inherit;
+  background-color: rgb(230, 126, 34);
+  border-color: rgb(202, 98, 7);
 }
- 
-/* input, textarea, select {
-  font: 15px "Josefin Sans", sans-serif;
-  font-weight: 400;
-  border-color: rgb(230, 126, 34);
-  width: 300px;
-  height: 20px;
-  border-width: 2px;
-} */
- 
+
+/* THIS ARRANGES THE FIRST PART VERTICALLY */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+::placeholder {
+  color: white;
+  /* THIS IS FOR FIREFOX BROWSER AS IT ADDS A LOWER OPACITY TO THE PLACEHOLDERS */
+  opacity: 1;
+}
+textarea::placeholder {
+  color: black;
+  font-family: inherit;
+  font-size: 15px;
+}
+@media (max-width: 1000px) {
+  .details-input {
+    width: 250px;
+    height: 1.5em;
+    font: inherit;
+    font-size: 0.8em;
+    color: inherit;
+    background-color: rgb(230, 126, 34);
+    border-color: rgb(202, 98, 7);
+  }
+  #textarea {
+    width: 260px !important;
+    height: 70px !important;
+  }
+}
